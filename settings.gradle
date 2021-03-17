@@ -1,0 +1,4 @@
+rootProject.name = 'cryptoApp'
+include 'back'
+include 'common'
+include 'front'
