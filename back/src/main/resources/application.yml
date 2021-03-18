@@ -3,15 +3,21 @@ spring:
   application:
     name: CryptoClient
   datasource:
-    url: jdbc:mysql://localhost:3306/crypto_client?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=True
+#    url: jdbc:mysql://localhost:3306/crypto_client?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=True
+#    username: cryptoclient
+#    passwOrd: cryptopassword
+#    driver-class-name: com.mysql.cj.jdbc.Driverroot
+    url: jdbc:postgresql://localhost:5432/cryptoapp
     username: cryptoclient
     passwOrd: cryptopassword
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-    database: mysql
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+#    database: mysql
+    database: postgresql
     show-sql: true
     hibernate:
       ddl-auto: update
